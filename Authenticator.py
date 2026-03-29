@@ -2,7 +2,7 @@
 import re 
 
 def checkPassed(binary):
-    
+
     # color constants
     colors = {
         "red": '\033[31m',
@@ -19,7 +19,7 @@ def checkPassed(binary):
     
         # condition does not meet
         else:
-            return f"{colors["red"]}Your input is Not Accepted.{colors["reset"]}"
+            return f"{colors["red"]}Your input is Rejected.{colors["reset"]}"
     
     # result if string contains other char than 1 and 0
     else:
