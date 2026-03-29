@@ -1,5 +1,4 @@
 #The authenticator Library
-
 import re 
 
 def checkPassed(binary):

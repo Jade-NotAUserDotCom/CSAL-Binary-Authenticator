@@ -1,4 +1,4 @@
-import sys, msvcrt
+import msvcrt
 from Fonts import figFont, lines
 from Authenticator import checkPassed
 from ScreenCleaner import clear
@@ -25,7 +25,7 @@ def main():
                 if binary.lower() == "exit":
                     inputting = False
                 elif binary.lower() == "rules":
-                    print(figFont("1. There must be at lease 3 1's", "digital", "magenta"))
+                    print(figFont("1. There must be at least 3 1's", "digital", "magenta"))
                     print(figFont('2. There must be "00" in the input', "digital", "magenta"))
                 else:
                     print(checkPassed(binary))
