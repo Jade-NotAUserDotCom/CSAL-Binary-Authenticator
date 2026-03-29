@@ -2,7 +2,7 @@
 import re 
 
 def checkPassed(binary):
-
+    
     # color constants
     colors = {
         "red": '\033[31m',

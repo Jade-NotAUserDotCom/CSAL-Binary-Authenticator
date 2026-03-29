@@ -14,11 +14,12 @@ def figFont(text, font, color):
 
     return colors[color] + word + colors['reset']
 
-def lines():
+def lines(x):
 
     word = ""
 
-    for _ in range(80):
+    for _ in range(x):
         word += "="
     
     return word
+

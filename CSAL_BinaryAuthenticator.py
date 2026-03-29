@@ -7,35 +7,36 @@ def main():
     exit = False
     while not exit:
         clear()
-        print(lines())
-        print(figFont("Binary Authenticator", "Slant", "red"))
-        print(lines())
+        print(lines(80))
+        print(figFont("Binary", "Slant", "red"))
+        print(figFont("Authenticator", "Slant", "magenta"))
+        print(lines(80))
         print('Type "Verify" to input string, "Exit" to exit')
         action = input("Action: ").lower()
         if action == "verify":
             inputting = True
             clear()
-            print(lines())
-            print(figFont("Enter the binary", "digital", "cyan"))
-            print(figFont("Type exit to return to home", "digital", "cyan"))
-            print(figFont("Type rules to show the rules of a valid binary", "digital", "cyan"))
-            print(lines())
+            print(lines(35))
+            print(figFont("Enter the binary", "term", "yellow"))
+            print(figFont("Type exit to return to home", "term", "yellow"))
+            print(figFont("Type rules to show the rules", "term", "yellow"))
+            print(lines(35))
             while inputting:
-                binary = input()
+                binary = input().strip(" ")
                 if binary.lower() == "exit":
                     inputting = False
                 elif binary.lower() == "rules":
-                    print(figFont("1. There must be at least 3 1's", "digital", "magenta"))
-                    print(figFont('2. There must be "00" in the input', "digital", "magenta"))
+                    print(figFont("1 There must be at least 3 1's", "term", "yellow"))
+                    print(figFont('2 There must be "00" in the input', "term", "yellow"))
                 else:
                     print(checkPassed(binary))
-                print(lines())
+                print(lines(35))
         elif action == "exit":
             exit = True
         else:
             continue
     clear()
-    print(figFont("Thank You for using Binary Authenticator!", "shadow", "yellow"))
+    print(figFont("Thank you for using Binary Authenticator!", "standard", "yellow"))
     print("Click Enter to exit")
 
     while True:
